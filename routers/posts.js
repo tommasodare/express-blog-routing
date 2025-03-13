@@ -10,7 +10,8 @@ router.get('/', (req, res) => {
 
 // Show (GET) -> Visualizzare un elemento (id)
 router.get('/:id', (req, res) => {
-    res.send(`Post visualizzato: ${req.params.id}`)
+    //res.send(`Post visualizzato: ${req.params.id}`)
+    res.json(posts[req.params.id])
 })
 
 // Create (POST) -> Creare nuovo elemento
