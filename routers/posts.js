@@ -1,11 +1,11 @@
 const express = require('express')
 const router = express.Router()
-//const posts = require('./bonus/posts_2,js')
+const posts = require('../bonus/posts')
 
 // Index (GET) -> visualizzare tutti gli elementi
 router.get('/', (req, res) => {
-    res.send('Lista dei post')
-    //res.json(posts)
+    //res.send('Lista dei post')
+    res.json(posts) // Restituisco l'array di posts.js
 })
 
 // Show (GET) -> Visualizzare un elemento (id)
