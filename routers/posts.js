@@ -1,14 +1,16 @@
 const express = require('express')
 const router = express.Router()
+//const posts = require('./bonus/posts_2,js')
 
 // Index (GET) -> visualizzare tutti gli elementi
 router.get('/', (req, res) => {
     res.send('Lista dei post')
+    //res.json(posts)
 })
 
 // Show (GET) -> Visualizzare un elemento (id)
 router.get('/:id', (req, res) => {
-    res.send(`Post visulizzato: ${req.params.id}`)
+    res.send(`Post visualizzato: ${req.params.id}`)
 })
 
 // Create (POST) -> Creare nuovo elemento
